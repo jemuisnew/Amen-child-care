@@ -1,121 +1,40 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #fff8f0;
-    color: #333;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    color: #ff7f50;
-}
-
-/* Header & Navigation */
-header {
-    background: #ffdaae;
-    padding: 20px 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header img {
-    width: 150px;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-/* Sections */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-section h2 {
-    color: #ff7f50;
-    margin-bottom: 20px;
-}
-
-section p, section ul, section li {
-    font-size: 1em;
-}
-
-/* Features / Cards */
-.features {
+/* ------------------------------
+   Contact Section Styling
+--------------------------------*/
+.contact {
+    background-color: #fff0f5; /* light lavender for friendly look */
+    padding: 60px 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
 }
 
-.feature {
-    background: #fff0d4;
-    border-radius: 12px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-5px);
-}
-
-/* Buttons */
-button {
-    background: #ff7f50;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #ff4500;
-}
-
-/* Footer */
-footer {
+.contact-container {
     text-align: center;
-    padding: 20px;
-    background: #ffdaae;
-    margin-top: 40px;
+    max-width: 600px;
+    background-color: #fff8dc; /* light creamy card */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
+.contact-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff69b4; /* pinkish for friendly vibe */
+}
 
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
+.contact-container p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-container a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-container a:hover {
+    color: #ff4500;
 }
