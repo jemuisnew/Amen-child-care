@@ -70,17 +70,11 @@ nav a:hover {
     display: inline-block;
 }
 
-/* Section Headings in Orange */
+/* Main Section Headings color change only */
 .hero h2,
 .about h2,
 .contact h2 {
-    color: #ff8c42; /* orange headings */
-}
-
-.hero h2:hover,
-.about h2:hover,
-.contact h2:hover {
-    color: #e6731f; /* darker orange on hover */
+    color: #ff8c42; /* new orange color */
 }
 
 .hero h2 {
