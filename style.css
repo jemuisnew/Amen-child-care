@@ -5,12 +5,24 @@
     box-sizing: border-box;
 }
 
-/* Body styles */
+/* Make html and body full height for footer positioning */
+html, body {
+    height: 100%;
+}
+
+/* Body layout using flex to keep footer at bottom */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff8f0;
+}
+
+/* Main content area flexes to push footer down */
+main {
+    flex: 1;
 }
 
 /* Header styles */
@@ -38,7 +50,7 @@ header img {
 
 header h1 {
     font-size: 2rem;
-    color: #ff8c42; /* header title color */
+    color: #ff8c42;
     margin-left: 10px;
 }
 
@@ -70,11 +82,11 @@ nav a:hover {
     display: inline-block;
 }
 
-/* Main Section Headings color change only */
+/* Main Section Headings color only */
 .hero h2,
 .about h2,
 .contact h2 {
-    color: #ff8c42; /* new orange color */
+    color: #ff8c42;
 }
 
 .hero h2 {
