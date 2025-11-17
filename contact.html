@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amen Daycare — Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header" class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">🌼 Amen Daycare</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="mobile-nav-toggle" class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container section fade-up">
+    <h1 class="section-title">Contact Us</h1>
+    <p class="section-sub">Schedule a tour or ask a question — we’d love to hear from you.</p>
+
+    <div class="grid contact-grid">
+      <div class="card">
+        <h3>Address</h3>
+        <p>3602 Centennial Way NE, Tacoma, WA 98422</p>
+
+        <h3>Phone</h3>
+        <p><a href="tel:+12066063624">+1 (206) 606-3624</a></p>
+
+        <h3>Email</h3>
+        <p><a href="mailto:helushawel@gmail.com">helushawel@gmail.com</a></p>
+      </div>
+
+      <div class="card">
+        <h3>Send a Message</h3>
+        <!-- Simple contact form (no back-end) -->
+        <form onsubmit="alert('Thanks — this form is a demo and will not send. Please contact via phone or email.'); return false;">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Amen Daycare | Growing with Love 🌷</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const mobileToggle = document.getElementById('mobile-nav-toggle');
+      if(mobileToggle){
+        mobileToggle.addEventListener('click', ()=> {
+          document.querySelector('.nav').classList.toggle('open');
+        });
+      }
+      const header = document.getElementById('site-header');
+      window.addEventListener('scroll', ()=> {
+        if(window.scrollY > 40) header.classList.add('sticky');
+        else header.classList.remove('sticky');
+      });
+      window.addEventListener('load', ()=> {
+        document.querySelectorAll('.fade-up').forEach((el, i)=>{
+          setTimeout(()=> el.classList.add('visible'), i*120);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

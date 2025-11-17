@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amen Daycare — About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="site-header" class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="logo">🌼 Amen Daycare</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-small">Contact</a>
+      </nav>
+      <button id="mobile-nav-toggle" class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container section fade-up">
+    <h1 class="section-title">About Amen Daycare</h1>
+    <p class="section-sub">Loving, safe, and educational care for infants, toddlers, and school-age children.</p>
+
+    <div class="grid about-grid">
+      <div>
+        <h3>Our Mission</h3>
+        <p>To provide nurturing early childhood experiences that promote growth, curiosity, and strong social foundations.</p>
+        <h3>Hours & Enrollment</h3>
+        <p>Open Monday–Saturday, 5am–9pm. We accept DHS and private enrollments.</p>
+      </div>
+
+      <div>
+        <h3>Our Space</h3>
+        <p>Bright, secure classrooms and outdoor play areas designed to encourage discovery.</p>
+        <div class="about-images">
+          <img src="images/learning1.jpg" alt="Learning activity">
+          <img src="images/playtime1.jpg" alt="Playtime activity">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Amen Daycare | Growing with Love 🌷</p>
+    </div>
+  </footer>
+
+  <script>
+    // reuse same small scripts as index
+    (function(){
+      const mobileToggle = document.getElementById('mobile-nav-toggle');
+      if(mobileToggle){
+        mobileToggle.addEventListener('click', ()=> {
+          document.querySelector('.nav').classList.toggle('open');
+        });
+      }
+      window.addEventListener('load', ()=> {
+        document.querySelectorAll('.fade-up').forEach((el, i)=>{
+          setTimeout(()=> el.classList.add('visible'), i*120);
+        });
+      });
+      const header = document.getElementById('site-header');
+      window.addEventListener('scroll', ()=> {
+        if(window.scrollY > 40) header.classList.add('sticky');
+        else header.classList.remove('sticky');
+      });
+    })();
+  </script>
+</body>
+</html>
